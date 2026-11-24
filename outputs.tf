@@ -1,11 +1,14 @@
-output "name_prefix" {
-  value = local.name_prefix
+output "alb_dns_name" {
+  description = "Nom DNS public de l'ALB (la page de l'environnement)."
+  value       = null
 }
 
-output "primary_region" {
-  value = data.aws_region.primary.region
+output "target_group_arn" {
+  description = "ARN du target group de la pile."
+  value       = null
 }
 
-output "replica_region" {
-  value = data.aws_region.replica.region
+output "asg_name" {
+  description = "Nom du groupe d'auto-scaling."
+  value       = null
 }
