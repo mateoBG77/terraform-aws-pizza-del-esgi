@@ -5,7 +5,7 @@ Aucun bloc provider : l'environnement appelant le configure.
 
 ## Appel
 module "web" {
-  source        = "git::https://github.com/mateoBG77/terraform-aws-pizza-del-esgi.git?ref=v0.1.0"
+  source        = "git::https://github.com/mateoBG77/terraform-aws-pizza-del-esgi.git?ref=v0.2.0"
   environment   = var.environment
   vpc_id        = module.vpc.vpc_id
   subnet_ids    = module.vpc.public_subnets
@@ -24,4 +24,5 @@ alb_dns_name, target_group_arn, asg_name
 Secret lu au démarrage : /pizza-del-esgi/<environment>/db_password (SecureString)
 
 ## Versions
-v0.1.0  contrat d'interface (entrées, sorties), pas encore de ressource
+v0.2.0  contrat d'interface (entrées, sorties), pas encore de ressource
+v0.1.0  ne pas utiliser : ancien squelette (erreur de tag)
